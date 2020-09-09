@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel 1</title>
+</head>
+<style>
+    body{
+        margin:0px;
+
+    }
+    .carousell{
+        width: 100%;
+        overflow: scroll;
+        padding:30px;
+        position:relative;
+    }
+    .carousell__container{
+        white-space: nowrap;
+        margin:70px 0px;
+        padding-bottom: 10px;
+    }
+    .carousel-item{
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color:red;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms all;
+        transform-origin: center left;
+    }
+    .carousel-item:hover ~ .carousel-item:hover{
+        transform: trnaslate3d(100px, 0, 0);
+    }
+    .carousell__container:hover .carousel-item{
+        opacity: 0.3;
+        
+    }
+    .carousell__container:hover  .carousel-item:hover{
+        transform: scale(1.5);
+        opacity:  1;
+    }
+
+</style>
+<body>
+    <section class="carousell">
+        <div class="carousell__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/3914693/pexels-photo-3914693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="picture">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="icons8-play-64.png" alt="">
+                        <img src="icons8-person-64.png" alt="">    
+                    </div>
+                    <p class="carousel-item__details--title">Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2016 16+ 144minutos </p>
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+
+            </div>
+            <div class="carousel-item">
+
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
