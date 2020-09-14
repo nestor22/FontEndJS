@@ -32,6 +32,7 @@
         cursor: pointer;
         transition: 450ms all;
         transform-origin: center left;
+        position: relative;
     }
     .carousel-item:hover ~ .carousel-item:hover{
         transform: trnaslate3d(100px, 0, 0);
@@ -44,6 +45,28 @@
         transform: scale(1.5);
         opacity:  1;
     }
+    .carousel-item__img{
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carousel-item__details{
+        background: linear-gradient(to top, rgba(0,0,0,0.9)0%, rgba(0,0,0,0)100%);
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+    .carousel-item__details:hover{
+        opacity: 1;
+    }
+
 
 </style>
 <body>
@@ -54,7 +77,7 @@
                 <div class="carousel-item__details">
                     <div>
                         <img src="icons8-play-64.png" alt="">
-                        <img src="icons8-person-64.png" alt="">    
+                        <img src="icons8-más-64.png" alt="">    
                     </div>
                     <p class="carousel-item__details--title">Titulo descriptivo</p>
                     <p class="carousel-item__details--subtitle">2016 16+ 144minutos </p>
